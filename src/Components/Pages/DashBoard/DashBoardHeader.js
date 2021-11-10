@@ -1,14 +1,14 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import { Button, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import useAuth from '../../../Hooks/useAuth';
+import useAuth from '../../Hooks/useAuth';
 
-const Header = () => {
+const DashBoardHeader = () => {
     const {user,logOut} = useAuth();
     return (
-        <div className="">
-           <Navbar collapseOnSelect expand="md" bg="light">
+        <div>
+            <Navbar collapseOnSelect expand="md" bg="light">
                 <Container>
                 <Navbar.Brand href="#home">Dream House</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -16,15 +16,15 @@ const Header = () => {
                     <Nav className="ms-auto">
                         <Nav.Link as={HashLink} to= "/home#home">Home</Nav.Link> 
                         
-                        <Nav.Link as={HashLink} to= "/houses">Explore House</Nav.Link> 
-                        
-                        
-                       
+                        <Nav.Link as={HashLink} to= "/myorders">My Orders</Nav.Link> 
+                        <Nav.Link as={HashLink} to= "/reviews">Review</Nav.Link> 
+                        <Nav.Link as={HashLink} to= "/pay">pay</Nav.Link>
+                        <Nav.Link as={HashLink} to= "/addproduct">Add a Product</Nav.Link>
 
                         
                         {user?.email ?
                                <Nav> 
-                                    <Nav.Link as={HashLink} to= "/dashboard">DashBoard</Nav.Link>
+                                    
                                     <Button onClick={logOut} className='btn btn-warning '>LogOut </Button>
                                     
                                </Nav> :
@@ -42,4 +42,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default DashBoardHeader;
