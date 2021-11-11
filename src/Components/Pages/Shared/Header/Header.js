@@ -16,7 +16,7 @@ const Header = () => {
                     <Nav className="ms-auto">
                         <Nav.Link as={HashLink} to= "/home#home">Home</Nav.Link> 
                         
-                        <Nav.Link as={HashLink} to= "/houses">Explore House</Nav.Link> 
+                        <Nav.Link as={HashLink} to= "/allhouses">Explore House</Nav.Link> 
                         
                         
                        

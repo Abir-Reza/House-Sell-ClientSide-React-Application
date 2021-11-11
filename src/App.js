@@ -8,13 +8,16 @@ import {
 
 import Home from './Components/Pages/Home/HomePage/Home';
 import DashBoard from './Components/Pages/DashBoard/DashBoard';
-import House from './Components/Pages/Houses/House';
 import Login from './Components/Pages/Login/Login';
 
 import Register from './Components/Pages/Login/Register';
 import AuthProvider from './Components/Context/AuthProvider';
 import AddProduct from './Components/Pages/DashBoard/AddProduct/AddProduct';
 import Pay from './Components/Pages/DashBoard/Pay/Pay';
+import Houses from './Components/Pages/AllHouses/Houses.js/Houses';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import MakeAdmin from './Components/Pages/DashBoard/MakeAdmin/MakeAdmin';
+import Purchase from './Components/Pages/Purchase/Purchase';
 
 
 
@@ -33,12 +36,12 @@ function App() {
             <Route path="/home">
               <Home />
             </Route>
-            <Route path="/houses">
-              <House></House>
+            <Route path="/allhouses">
+              <Houses></Houses>
             </Route>
-            <Route path="/dashboard">
+            <PrivateRoute path="/dashboard">
               <DashBoard></DashBoard>
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login></Login>
             </Route>
@@ -46,14 +49,21 @@ function App() {
               <Register></Register>
             </Route>
 
+            <PrivateRoute path="/purchase">
+              <Purchase></Purchase>
+            </PrivateRoute>
 
-            <Route path="/pay">
+            <PrivateRoute path="/pay">
               <Pay></Pay>
-            </Route>
+            </PrivateRoute>
 
-            <Route path="/addproduct">
+            <PrivateRoute path="/addproduct">
               <AddProduct></AddProduct>
-            </Route>
+            </PrivateRoute>
+
+            <PrivateRoute path="/makeadmin">
+              <MakeAdmin></MakeAdmin>
+            </PrivateRoute>
           </Switch>
       
       </Router>

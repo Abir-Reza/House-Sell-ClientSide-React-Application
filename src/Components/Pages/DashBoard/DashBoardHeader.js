@@ -6,31 +6,42 @@ import useAuth from '../../Hooks/useAuth';
 
 const DashBoardHeader = () => {
     const {user,logOut} = useAuth();
+    const {admin} = useAuth();
     return (
         <div>
             <Navbar collapseOnSelect expand="md" bg="light">
                 <Container>
-                <Navbar.Brand href="#home">Dream House</Navbar.Brand>
+                
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto">
-                        <Nav.Link as={HashLink} to= "/home#home">Home</Nav.Link> 
                         
-                        <Nav.Link as={HashLink} to= "/myorders">My Orders</Nav.Link> 
-                        <Nav.Link as={HashLink} to= "/reviews">Review</Nav.Link> 
-                        <Nav.Link as={HashLink} to= "/pay">pay</Nav.Link>
-                        <Nav.Link as={HashLink} to= "/addproduct">Add a Product</Nav.Link>
+                        {
+                            admin && 
+                            <Nav>
+                                <h5 className="navbar-text">Admin DashBoard</h5>
+                                <Nav.Link as={HashLink} to= "/manageallorders">Manage All Orders</Nav.Link>
+                                <Nav.Link as={HashLink} to= "/addproduct">Add a Product</Nav.Link>
+                                <Nav.Link as={HashLink} to= "/manageproduct">Manage Product</Nav.Link>
+                                <Nav.Link as={HashLink} to= "/makeadmin">Make Admin</Nav.Link>
+                            </Nav> } 
 
-                        
-                        {user?.email ?
+                            {
+                                !admin && 
+                                <Nav>
+                                     <h5 className="navbar-text  ">User DashBoard</h5>
+                                    <Nav.Link as={HashLink} to= "/myorders">My Orders</Nav.Link> 
+                                    <Nav.Link as={HashLink} to= "/reviews">Reviews</Nav.Link> 
+                                    <Nav.Link as={HashLink} to= "/pay">pay</Nav.Link>
+                            </Nav>
+                            }
+                                             
                                <Nav> 
                                     
                                     <Button onClick={logOut} className='btn btn-warning '>LogOut </Button>
                                     
-                               </Nav> :
-                        
-                                <Nav.Link as={Link} to="/login">Login</Nav.Link>
-                            }                      
+                               </Nav> 
+                                                
                         
                     </Nav>
                     

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Alert, Button, Container, Form, Spinner } from 'react-bootstrap';
 import { NavLink, useLocation,useHistory } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
+import Header from '../Shared/Header/Header';
 
 const Login = () => {
     const [loginData,setLoginData] = useState({});
@@ -31,7 +32,10 @@ const Login = () => {
         signInWithGoogle(location,history);
     }
     return (
+        <>
+        <Header></Header>
         <div className="d-flex flex-column align-items-center mt-5">
+            
             <h1> Login </h1>
             {isLoading && <Spinner animation="border" variant="secondary" />}   <br/>
 
@@ -68,7 +72,7 @@ const Login = () => {
             <NavLink style={{textDecoration:"none" }} to="/register"><Button variant="light">Not registered yet? Register Here</Button></NavLink>
             
 
-        </div>
+        </div> </>
     );
 };
 
