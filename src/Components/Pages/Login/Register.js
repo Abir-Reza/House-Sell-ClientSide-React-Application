@@ -15,7 +15,7 @@ const Register = () => {
         const newLoginData = {...loginData};
         newLoginData[field] = value;
         setLoginData(newLoginData);
-        console.log(loginData);
+        
     }
 
     const handleLoginSubmit=(e)=> {
@@ -56,7 +56,7 @@ const Register = () => {
                 <Button variant="primary" type="submit">
                     Register
                 </Button> 
-                {isLoading && <Spinner animation="border" variant="secondary" />}
+                {/* {isLoading && <Spinner animation="border" variant="secondary" />} */}
 
                 {user?.email && 
                 <Alert key='success' variant="success"> registered successfully </Alert>}

@@ -18,6 +18,7 @@ import Houses from './Components/Pages/AllHouses/Houses.js/Houses';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import MakeAdmin from './Components/Pages/DashBoard/MakeAdmin/MakeAdmin';
 import Purchase from './Components/Pages/Purchase/Purchase';
+import MyOrders from './Components/Pages/DashBoard/MyOrders/MyOrders';
 
 
 
@@ -49,8 +50,12 @@ function App() {
               <Register></Register>
             </Route>
 
-            <PrivateRoute path="/purchase">
+            <PrivateRoute path="/houses/:houseId">
               <Purchase></Purchase>
+            </PrivateRoute> 
+
+            <PrivateRoute path="/myorders">
+              <MyOrders></MyOrders>
             </PrivateRoute>
 
             <PrivateRoute path="/pay">
@@ -63,7 +68,7 @@ function App() {
 
             <PrivateRoute path="/makeadmin">
               <MakeAdmin></MakeAdmin>
-            </PrivateRoute>
+            </PrivateRoute> 
           </Switch>
       
       </Router>

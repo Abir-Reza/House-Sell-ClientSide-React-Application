@@ -14,6 +14,10 @@ const DashBoardHeader = () => {
                 
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
+
+                    <Nav className="me-auto"> 
+                        <Nav.Link as={HashLink} to= "/home">Back to Home</Nav.Link> 
+                    </Nav>
                     <Nav className="ms-auto">
                         
                         {

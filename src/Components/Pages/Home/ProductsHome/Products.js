@@ -25,7 +25,7 @@ const Products = (house) => {
                         {description}
                     </Card.Text>       
 
-                    <Link to={`/purchase/${_id}`}>
+                    <Link to={`/houses/${_id}`}>
                         <Button className='btn-regular' variant="warning">Purchase</Button>  
                     </Link>                   
                                      

@@ -28,16 +28,14 @@ const Login = () => {
         
     }
 
-    const handleSignInGoogle=() => {
-        signInWithGoogle(location,history);
-    }
+    
     return (
         <>
         <Header></Header>
         <div className="d-flex flex-column align-items-center mt-5">
             
             <h1> Login </h1>
-            {isLoading && <Spinner animation="border" variant="secondary" />}   <br/>
+            {/* {isLoading && <Spinner animation="border" variant="secondary" />}   <br/> */}
 
             <Container>
             <Form onSubmit={handleLoginSubmit}>
