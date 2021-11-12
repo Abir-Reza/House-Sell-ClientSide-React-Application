@@ -1,8 +1,9 @@
 import React from 'react';
 import { Button, Col, Image, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const House = (house) => {
-    const {title,place,country,description,img} = house.house;
+    const {_id,title,place,country,description,img} = house.house;
 
 
     const handlePurchaseApply = (id) => {
@@ -26,8 +27,12 @@ const House = (house) => {
                 </Col>
                 <Col className="text-center align-self-center">
                     
-                    <Button  className="btn btn-success">Apply for Purchase</Button>
+                    <Link to={`/houses/${_id}`}>
+                        <Button className='btn-regular' variant="warning">Purchase</Button>  
+                    </Link> 
                 </Col>
+
+               
             </Row>
         </Col> 
 

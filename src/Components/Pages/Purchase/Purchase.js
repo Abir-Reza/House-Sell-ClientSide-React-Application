@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import useAuth from '../../Hooks/useAuth';
+import Header from '../Shared/Header/Header';
 
 
 const Purchase = () => {
@@ -60,6 +61,8 @@ const Purchase = () => {
 
     return (
         <div>
+            <Header></Header>
+            
             <h1 className="text-center mt-4 mb-5"> House Detail</h1>
 
             <Container >
@@ -123,6 +126,9 @@ const Purchase = () => {
                 </Button>
             </Form>
             </Container>
+
+            <br></br>
+            <br></br>
             
         </div>
     );

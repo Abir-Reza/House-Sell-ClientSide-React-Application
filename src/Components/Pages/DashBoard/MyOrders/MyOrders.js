@@ -2,6 +2,7 @@ import { map } from '@firebase/util';
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import useAuth from '../../../Hooks/useAuth';
+import DashBoardHeader from '../DashBoardHeader';
 import MyOrder from './MyOrder';
 
 const MyOrders = () => {
@@ -21,6 +22,7 @@ const MyOrders = () => {
 
     return (
         <div>
+            <DashBoardHeader></DashBoardHeader>
             <h1 className="text-center mt-4">My Orders</h1>
 
             <Container>
