@@ -19,6 +19,7 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import MakeAdmin from './Components/Pages/DashBoard/MakeAdmin/MakeAdmin';
 import Purchase from './Components/Pages/Purchase/Purchase';
 import MyOrders from './Components/Pages/DashBoard/MyOrders/MyOrders';
+import AddReview from './Components/Pages/Home/Reviews/AddReview';
 
 
 
@@ -57,6 +58,10 @@ function App() {
             <PrivateRoute path="/myorders">
               <MyOrders></MyOrders>
             </PrivateRoute>
+            <PrivateRoute path="/addreviews">
+              <AddReview></AddReview>
+            </PrivateRoute>
+
 
             <PrivateRoute path="/pay">
               <Pay></Pay>

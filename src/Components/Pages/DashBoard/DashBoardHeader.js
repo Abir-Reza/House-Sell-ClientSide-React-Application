@@ -35,7 +35,7 @@ const DashBoardHeader = () => {
                                 <Nav>
                                      <h5 className="navbar-text  ">User DashBoard</h5>
                                     <Nav.Link as={HashLink} to= "/myorders">My Orders</Nav.Link> 
-                                    <Nav.Link as={HashLink} to= "/reviews">Reviews</Nav.Link> 
+                                    <Nav.Link as={HashLink} to= "/addreviews">Add Review</Nav.Link> 
                                     <Nav.Link as={HashLink} to= "/pay">pay</Nav.Link>
                             </Nav>
                             }
