@@ -7,7 +7,7 @@ const ManageProduct = ({house}) => {
 
     const handleDeleteProduct = (id) => {
         alert("Confirm Delete ? ");
-        const url = `http://localhost:5000/houses/${id}`;
+        const url = `https://evening-harbor-83022.herokuapp.com/houses/${id}`;
         fetch (url, {
             method : 'DELETE'
         })

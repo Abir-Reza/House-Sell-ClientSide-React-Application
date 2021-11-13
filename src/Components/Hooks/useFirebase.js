@@ -57,7 +57,7 @@ const useFirebase = () => {
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
-            const destination = location?.state?.from || '/';
+            const destination = location?.state?.from || '/dashboard';
             history.replace(destination);
             setAuthError('');
         })
