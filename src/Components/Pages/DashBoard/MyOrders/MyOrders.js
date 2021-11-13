@@ -17,7 +17,7 @@ const MyOrders = () => {
             setOrders(data) ;
             console.log("orderlist : ",data)
         })
-    },[])
+    },[orders])
 
 
     return (

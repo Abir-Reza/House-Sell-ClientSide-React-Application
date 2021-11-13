@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table } from 'react-bootstrap';
+import { Container, Row, Table } from 'react-bootstrap';
 import DashBoardHeader from '../DashBoardHeader';
 import ManageOrder from './ManageOrder';
 
@@ -17,27 +17,19 @@ const ManageOrders = () => {
         <div>
             <DashBoardHeader></DashBoardHeader>
             <h2 className = "text-center mt-3 mb-3"> Manage Orders</h2>
-            <Table striped bordered hover size="sm">
-                <thead>
-                    <tr>
-                    <th>#</th>
-                    <th>Client Name</th>
-                    <th>Product Title</th>
-                    <th>Property Location</th>
-                    <th>Action</th>
-
-                    </tr>
-                </thead>
-
+            <Container>
+                <Row className="g-2">
                 {
-                    orders.map ( order => <ManageOrder
+                    orders.map(order => <ManageOrder
+                    key = {order._id}
+                    order = {order}
+
                     
-                        key= {order._id}
-                        order= {order}
-                    ></ManageOrder> )
+                    >
+                    </ManageOrder> )
                 }
-                
-            </Table>
+                </Row>
+            </Container>
         </div>
     );
 };

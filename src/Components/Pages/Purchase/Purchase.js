@@ -11,6 +11,7 @@ const Purchase = () => {
     const {user} = useAuth();
     const intialInfo = {clientName : user.displayName, clientEmail: user.email, address:" ", clientCity: " ", clientCountry: " "};
     const [purchaseInfo, setPurchaseInfo] = useState(intialInfo);
+    const [orderStatus, setOrderStatus] =useState('Pending');
 
     useEffect( ()=>{
         const url = `https://evening-harbor-83022.herokuapp.com/houses/${houseId}` ;
@@ -26,7 +27,7 @@ const Purchase = () => {
         const newPurchaseInfo = { ...purchaseInfo};
         newPurchaseInfo[field] = value;
         setPurchaseInfo(newPurchaseInfo);
-        console.log(purchaseInfo);
+        
 
         
     }
@@ -39,7 +40,9 @@ const Purchase = () => {
             housePlace: house.place,
             houseCountry: house.country,
             houseDescription: house.description,
-            houseImg: house.img
+            houseImg: house.img,
+            orderStatus: orderStatus
+
             
         }
 

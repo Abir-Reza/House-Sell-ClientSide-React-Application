@@ -3,7 +3,7 @@ import { Button, Col, Container, Image, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const MyOrder = ({order}) => {
-    const {_id, houseId,houseTitle,housePlace,houseCountry,houseDescription,houseImg} = order;
+    const {_id, houseId,houseTitle,housePlace,houseCountry,houseDescription,houseImg, orderStatus} = order;
     
      const handleDelete = (id) => {
          alert("Confirm Delete ? ");
@@ -30,9 +30,11 @@ const MyOrder = ({order}) => {
             <Row>
                 <Col >
                     <p className=''>{houseDescription}</p>
+                    <p><b>Status: {orderStatus}</b></p>
                     
                 </Col>
                 <Col className="text-center align-self-center">
+                    
                     
                     <Button onClick={() => handleDelete(_id)}  className="btn btn-success">Delete order</Button>
                 </Col>
