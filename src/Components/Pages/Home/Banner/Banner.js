@@ -1,12 +1,13 @@
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
+import { Carousel, Container } from 'react-bootstrap';
 import banner1 from '../../../../images/houseBanner1.jpg';
 import banner2 from '../../../../images/house1.jpg';
 
 const Banner = () => {
     return (
         <div>
-            <Carousel variant="dark">
+           <Container>
+           <Carousel variant="dark">
                 <Carousel.Item>
                     <img
                     className="d-block w-100"
@@ -41,6 +42,7 @@ const Banner = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
+           </Container>
         </div>
     );
 };

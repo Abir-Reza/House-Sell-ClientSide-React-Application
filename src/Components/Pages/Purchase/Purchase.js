@@ -13,7 +13,7 @@ const Purchase = () => {
     const [purchaseInfo, setPurchaseInfo] = useState(intialInfo);
 
     useEffect( ()=>{
-        const url = `http://localhost:5000/houses/${houseId}` ;
+        const url = `https://evening-harbor-83022.herokuapp.com/houses/${houseId}` ;
         fetch(url)
         .then(res => res.json())
         .then(data => setHouse(data))
@@ -44,7 +44,7 @@ const Purchase = () => {
         }
 
          // send to the server
-         fetch('http://localhost:5000/orders', {
+         fetch('https://evening-harbor-83022.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

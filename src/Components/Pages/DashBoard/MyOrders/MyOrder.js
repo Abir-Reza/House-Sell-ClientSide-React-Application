@@ -7,7 +7,7 @@ const MyOrder = ({order}) => {
     
      const handleDelete = (id) => {
          alert("Confirm Delete ? ");
-         const url = `http://localhost:5000/myorders/${id}`;
+         const url = `https://evening-harbor-83022.herokuapp.com/myorders/${id}`;
          fetch (url, {
              method : 'DELETE'
          })
@@ -16,7 +16,7 @@ const MyOrder = ({order}) => {
              console.log('deleted ', data);
          })
      }
-   console.log(order);
+   
     return (
         <div className='d-flex flex-column flex-sm-row mb-3'>
             

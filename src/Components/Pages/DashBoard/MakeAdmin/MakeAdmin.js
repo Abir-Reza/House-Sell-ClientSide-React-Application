@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Alert, Button, Container, Form } from 'react-bootstrap';
+import DashBoardHeader from '../DashBoardHeader';
 
 const MakeAdmin = () => {
     const [email,setEmail] =  useState('');
@@ -12,7 +13,7 @@ const MakeAdmin = () => {
 
     const handleAdminForm = e => {
         const user = { email };
-        fetch('http://localhost:5000/users/admin', {
+        fetch('https://evening-harbor-83022.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
                 
@@ -33,6 +34,7 @@ const MakeAdmin = () => {
 
     return (
         <div>
+            <DashBoardHeader></DashBoardHeader>
             <h2 className="text-center mt-5 mb-5">Make an Admin</h2>
             <Container>
                 <Form onSubmit={handleAdminForm}>

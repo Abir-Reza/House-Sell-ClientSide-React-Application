@@ -6,7 +6,7 @@ const ProductsInHomePage = () => {
     const [houses,setHouses] = useState([]);
 
     useEffect( () => {
-        fetch('http://localhost:5000/houseshomepage')
+        fetch('https://evening-harbor-83022.herokuapp.com/houseshomepage')
         .then(res => res.json())
         .then( data => {
             setHouses(data);

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
+import DashBoardHeader from '../DashBoardHeader';
 
 
 const AddProduct = () => {
@@ -27,7 +28,7 @@ const AddProduct = () => {
         console.log(house);
 
          // send to the server
-        fetch('http://localhost:5000/houses', {
+        fetch('https://evening-harbor-83022.herokuapp.com/houses', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -50,6 +51,8 @@ const AddProduct = () => {
     
     return (
         <div >
+
+            <DashBoardHeader></DashBoardHeader>
             <h1 className="text-center mt-5">Add a Property</h1>
             <Container>
             <Form  onSubmit={handleAddPropertySubmit}>

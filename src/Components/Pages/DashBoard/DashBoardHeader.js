@@ -24,9 +24,9 @@ const DashBoardHeader = () => {
                             admin && 
                             <Nav>
                                 <h5 className="navbar-text">Admin DashBoard</h5>
-                                <Nav.Link as={HashLink} to= "/manageallorders">Manage All Orders</Nav.Link>
+                                <Nav.Link as={HashLink} to= "/manage_orders">Manage All Orders</Nav.Link>
                                 <Nav.Link as={HashLink} to= "/addproduct">Add a Product</Nav.Link>
-                                <Nav.Link as={HashLink} to= "/manageproduct">Manage Product</Nav.Link>
+                                <Nav.Link as={HashLink} to= "/manageproducts">Manage Products</Nav.Link>
                                 <Nav.Link as={HashLink} to= "/makeadmin">Make Admin</Nav.Link>
                             </Nav> } 
 

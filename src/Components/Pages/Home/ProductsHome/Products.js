@@ -7,9 +7,6 @@ const Products = (house) => {
     const { _id,title,place,country,description,img} = house.house;
 
 
-    const handlePurchaseApply = (id) => {
-
-    }
     return (
         <div className='d-flex flex-column flex-sm-row mb-3'>
             

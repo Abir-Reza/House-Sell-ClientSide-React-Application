@@ -9,7 +9,7 @@ const Houses = () => {
     const [houses,setHouses] = useState([]);
 
     useEffect( () => {
-        fetch('http://localhost:5000/allhouses')
+        fetch('https://evening-harbor-83022.herokuapp.com/allhouses')
         .then(res => res.json())
         .then( data => {
             setHouses(data);

@@ -20,6 +20,8 @@ import MakeAdmin from './Components/Pages/DashBoard/MakeAdmin/MakeAdmin';
 import Purchase from './Components/Pages/Purchase/Purchase';
 import MyOrders from './Components/Pages/DashBoard/MyOrders/MyOrders';
 import AddReview from './Components/Pages/Home/Reviews/AddReview';
+import ManageProducts from './Components/Pages/DashBoard/ManageProduct/ManageProducts';
+import ManageOrders from './Components/Pages/DashBoard/ManageOrders/ManageOrders';
 
 
 
@@ -69,6 +71,14 @@ function App() {
 
             <PrivateRoute path="/addproduct">
               <AddProduct></AddProduct>
+            </PrivateRoute>
+
+            <PrivateRoute path="/manage_orders">
+              <ManageOrders></ManageOrders>
+            </PrivateRoute>
+
+            <PrivateRoute path="/manageproducts">
+              <ManageProducts></ManageProducts>
             </PrivateRoute>
 
             <PrivateRoute path="/makeadmin">
